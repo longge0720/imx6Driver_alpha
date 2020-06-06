@@ -1,0 +1,1 @@
+cmd_/home/sxl/driver/2linuxDriver/imx6Driver_alpha/mydtsled/dtsled.ko := arm-poky-linux-gnueabi-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/sxl/driver/2linuxDriver/imx6Driver_alpha/mydtsled/dtsled.ko /home/sxl/driver/2linuxDriver/imx6Driver_alpha/mydtsled/dtsled.o /home/sxl/driver/2linuxDriver/imx6Driver_alpha/mydtsled/dtsled.mod.o
