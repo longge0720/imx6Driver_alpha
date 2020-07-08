@@ -1,0 +1,77 @@
+
+#include "imx6ull-14x14-evk-emmc.dts"
+
+&i2c2 {
+	edt-ft5x06@38 {
+		status = "okay";
+	};
+
+	goodix_ts@5d {
+		status = "disabled";
+	};
+};
+
+&lcdif {
+	display0: display {
+		bits-per-pixel = <16>;
+		bus-width = <24>;
+
+		display-timings {
+			native-mode = <&timing0>;
+			timing0: timing0 {
+			clock-frequency = <51000000>;
+			hactive = <1024>;
+			vactive = <600>;
+			hfront-porch = <160>;
+			hback-porch = <140>;
+			hsync-len = <20>;
+			vback-porch = <20>;
+			vfront-porch = <12>;
+			vsync-len = <3>;
+
+			hsync-active = <0>;
+			vsync-active = <0>;
+			de-active = <1>;
+			pixelclk-active = <0>;
+			};
+		};
+	};
+};
+
+/ {
+	alphaled {
+	#address-cells = <1>;/* 寄存器基地址所占字节 1 */
+	#size-cells = <1>;/* 描述寄存器长度 */
+	compatible = "atkalpha-led";
+	status = "okay";
+ 	reg = < 0X020C406C 0X04 /* 时钟寄存器 CCM_CCGR1_BASE */
+ 	0X020E0068 0X04 /* GPIO引脚映射寄存器 SW_MUX_GPIO1_IO03_BASE */
+ 	0X020E02F4 0X04 /* GPIOSW_PAD_GPIO1_IO03_BASE */
+ 	0X0209C000 0X04 /* GPIO1_DR_BASE */
+	0X0209C004 0X04 >; /* GPIO1_GDIR_BASE */
+ };
+
+
+gpioled {
+	#address-cells = <1>;
+	#size-cells = <1>;
+	compatible = "atkalpha-gpioled";
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_led>;
+	led-gpio = <&gpio1 3 GPIO_ACTIVE_LOW>;
+	status = "okay";
+ };
+
+//第二步在根节点下 实现beep节点
+beep {
+	#address-cells = <1>;/* 寄存器基地址所占字节 1 */
+	#size-cells = <1>;/* 描述寄存器长度 */
+	compatible = "atkalpha-beep";
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_beepp>;/* 根据这个设置找到 第一步 pinctrl中 iomux里面的 节点 */
+	beep-gpio = <&gpio5 1 GPIO_ACTIVE_HIGH>;/*gpio绑定，告诉内核 beep-gpio引脚 上下拉使能方式 */
+	status = "okay";
+};
+
+
+};
