@@ -1,0 +1,1 @@
+cmd_/home/sxl/driver/2linuxDriver/imx6Driver_alpha/7semaphore/semaphore.ko := arm-poky-linux-gnueabi-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/sxl/driver/2linuxDriver/imx6Driver_alpha/7semaphore/semaphore.ko /home/sxl/driver/2linuxDriver/imx6Driver_alpha/7semaphore/semaphore.o /home/sxl/driver/2linuxDriver/imx6Driver_alpha/7semaphore/semaphore.mod.o
