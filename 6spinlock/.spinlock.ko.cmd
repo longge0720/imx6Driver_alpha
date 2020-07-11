@@ -1,0 +1,1 @@
+cmd_/home/sxl/driver/2linuxDriver/imx6Driver_alpha/6spinlock/spinlock.ko := arm-poky-linux-gnueabi-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/sxl/driver/2linuxDriver/imx6Driver_alpha/6spinlock/spinlock.ko /home/sxl/driver/2linuxDriver/imx6Driver_alpha/6spinlock/spinlock.o /home/sxl/driver/2linuxDriver/imx6Driver_alpha/6spinlock/spinlock.mod.o
