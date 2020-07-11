@@ -1,0 +1,1 @@
+cmd_/home/sxl/driver/2linuxDriver/imx6Driver_alpha/5atomic/atomic.ko := arm-poky-linux-gnueabi-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/sxl/driver/2linuxDriver/imx6Driver_alpha/5atomic/atomic.ko /home/sxl/driver/2linuxDriver/imx6Driver_alpha/5atomic/atomic.o /home/sxl/driver/2linuxDriver/imx6Driver_alpha/5atomic/atomic.mod.o
