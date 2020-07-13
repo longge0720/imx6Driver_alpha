@@ -1,0 +1,1 @@
+cmd_/home/sxl/driver/2linuxDriver/imx6Driver_alpha/9key/key.ko := arm-poky-linux-gnueabi-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/sxl/driver/2linuxDriver/imx6Driver_alpha/9key/key.ko /home/sxl/driver/2linuxDriver/imx6Driver_alpha/9key/key.o /home/sxl/driver/2linuxDriver/imx6Driver_alpha/9key/key.mod.o
