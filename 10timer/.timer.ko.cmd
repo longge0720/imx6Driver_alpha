@@ -1,0 +1,1 @@
+cmd_/home/sxl/driver/2linuxDriver/imx6Driver_alpha/10timer/timer.ko := arm-poky-linux-gnueabi-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/sxl/driver/2linuxDriver/imx6Driver_alpha/10timer/timer.ko /home/sxl/driver/2linuxDriver/imx6Driver_alpha/10timer/timer.o /home/sxl/driver/2linuxDriver/imx6Driver_alpha/10timer/timer.mod.o
